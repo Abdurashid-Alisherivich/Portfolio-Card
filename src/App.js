@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import Card from "./components/Card";
+import './App.css'
 
-function App() {
-  return (
+const App = () =>{
+  
+  const [name, setName] = useState('Your Name');
+  const [job, setJob] = useState('Job Title');
+  const [about, setAbout] = useState('Hey, this is my homepage, so I have to say something about myself. Sometimes it is hard to introduce yourself because you know yourself so well that you do not know where to start with. Let me give a try to see what kind of image you have about me through my self-description.');
+
+  return(
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card name={'Abdurashid Nabijonov'} job={'Frontend Developer'} about={about} />
     </div>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App; 
